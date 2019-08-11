@@ -18,11 +18,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Случайная цитата</h1>
-        <h3>
-            "<?php
-                print ($random_cite);
-            ?>"
-        </h3>
+        <h1>Случайная цитата:</h1>
+        <h3>"<?php print ($random_cite); ?>"</h3>
     </body>
 </html>
