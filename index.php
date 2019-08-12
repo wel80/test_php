@@ -40,5 +40,17 @@
                 <span class="lot__cost"><?php price_format($price); ?></span>
             </div>
         </div>
+        <div class="cite">
+            <h1>Все цитаты:</h1>
+            <?php 
+                $index = 0;
+                $cites_count = count($cites);
+
+                while ($index < $cites_count) {
+                    print ('<h3>"' . $cites[$index] . '"</h3>');
+                    $index += 1;
+                }
+            ?>
+        </div>
     </body>
 </html>
