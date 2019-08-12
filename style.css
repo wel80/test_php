@@ -24,3 +24,24 @@ div.cite h3 {
     color: rgb(0, 0, 150);
     text-align: center;
 }
+
+div.price {
+    margin-left: 100px;
+}
+
+.rub {
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-left: 4px;
+    font-size: 0;
+    vertical-align: baseline;
+    background: url("rub.svg") 0 0 no-repeat;
+}
+
+.lot__cost {
+    display: block;
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 700;
+}
