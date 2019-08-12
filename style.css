@@ -25,8 +25,24 @@ div.cite h3 {
     text-align: center;
 }
 
+div.container {
+    width: 150px;
+    height: 150px;
+    margin-left: 200px;
+    background-color: rgba(200, 200, 200, 0.4);
+    border: 3px solid rgb(235, 235, 235);
+    border-radius: 50%;
+    color: rgb(50, 50, 50);
+}
+
 div.price {
-    margin-left: 100px;
+    margin: 35px auto;
+}
+
+div.price h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .rub {
@@ -44,4 +60,5 @@ div.price {
     font-size: 28px;
     line-height: 28px;
     font-weight: 700;
+    text-align: center;
 }
