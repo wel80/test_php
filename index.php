@@ -9,17 +9,25 @@
     $rand_key = array_rand($cites);
     $random_cite = $cites[$rand_key];
 
-    $price = 15445.2565;
+    function price_format($cost, $iso) {
+        $currency_list = [
+            'rub' => '&#x584;',
+            'usd' => '&#36;',
+            'eur' => '&euro;'
+        ];
 
-    function price_format($cost) {
         $cost_ceil = ceil($cost);
+
         if ($cost_ceil >= 1000) {
             $cost_format = number_format($cost_ceil, 0, ',', ' ');
         } else {
             $cost_format = $cost_ceil;
         }
-        print ($cost_format . ' <b class="rub">р</b>');
+        print ($cost_format . ' <b class="' . $iso . '">' . $currency_list[$iso] . '</b>');
     }
+
+    $price = 15445.2565;
+    $iso_price = 'eur';
 ?>
 
 <!DOCTYPE HTML>
@@ -37,7 +45,7 @@
         <div class="container">
             <div class="price">
                 <h1>Цена</h1>
-                <span class="lot__cost"><?php price_format($price); ?></span>
+                <span class="lot__cost"><?php price_format($price, $iso_price); ?></span>
             </div>
         </div>
         <div class="cite">
