@@ -3,8 +3,7 @@
         1 => 'Меня трудно найти, легко потерять и невозможно забыть',
         3 => 'Подошёл, взял за руку, уверенно сказал "моя" и увёл',
         50 => 'Я ангел. Но когда мне обрезают крылья приходится летать на метле',
-        6 => 'Когда меня спрашивают, что важнее, еда или любовь, я молчу, потому что ем.',
-        34 => 'дгшифытжуфитх щдлтфыдажт  ыфатщ'
+        6 => 'Когда меня спрашивают, что важнее, еда или любовь, я молчу, потому что ем.'
     ];
 
     $rand_key = array_rand($cites);
@@ -23,7 +22,7 @@
         2564.598845
     ];
 
-    $iso_rand = 'EUR';
+    $iso_rand = array_rand(CURRENCY_LIST);
     $price_key_rand = array_rand($price_list);
     $price = $price_list[$price_key_rand] ;
 
@@ -59,10 +58,10 @@
             </div>
         </div>
         <div class="cite">
-            <h1>Все цитаты:</h1>
+            <h1>Все цитаты с "Ё":</h1>
             <?php
                 $cites_filter = array_filter($cites, function($item) {
-                    if (strpos($item, 'я') === false) {
+                    if (strpos($item, 'ё') === false) {
                         return false;
                     } else {
                         return true;
